@@ -1,0 +1,2 @@
+# go-figure
+Config manager
