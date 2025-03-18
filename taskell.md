@@ -1,10 +1,6 @@
 ## Project
 
 - --- PACKAGES ---
-- Detect distro
-- Detect package manager
-- List all installed packages
-- Generate JSON? file with info and packages
 - Listener for changes
     > Have an Alpha config and a beta config, alpha being the main stable snapshot, beta having versions, enable merging
 - --- CONFIG ---
@@ -34,3 +30,7 @@
 
 ## Done
 
+- Detect distro
+- Detect package manager
+- List all installed packages
+- Generate JSON? file with info and packages
