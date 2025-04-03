@@ -1,20 +1,20 @@
 package internal
 
 import (
+	"encoding/json"
 	"fmt"
 	"os"
 	"os/exec"
 	"path/filepath"
 	"strings"
-	// "encoding/json"
 )
 
 type SystemInfo struct {
-	OS         string            `json: "os"`
-	pkgManager string            `json: "pkgManager"`
-	Packages   map[string]string `json: "packages"`
-	Snaps      map[string]string `json: "snaps"`
-	Flatpaks   map[string]string `json: "flatpaks"`
+	OS         string            `json:"os"`
+	PkgManager string            `json:"pkgManager"`
+	Packages   map[string]string `json:"packages"`
+	Snaps      map[string]string `json:"snaps"`
+	Flatpaks   map[string]string `json:"flatpaks"`
 }
 
 func DetectSystem() string {
@@ -99,6 +99,50 @@ func ListPackages(pkgManager string) []string {
 	return packages
 }
 
+func ListSnapPackages() map[string]string {
+	snaps := make(map[string]string)
+
+	cmd := exec.Command("snap", "list")
+	output, err := cmd.Output()
+	if err != nil {
+		return snaps
+	}
+
+	lines := strings.Split(string(output), "\n")
+
+	for i, line := range lines {
+		if i == 0 || strings.TrimSpace(line) == "" {
+			continue
+		}
+
+		fields := strings.Fields(line)
+		if len(fields) > 0 {
+			snaps[fields[0]] = "installed"
+		}
+	}
+	return snaps
+}
+
+func ListFlatpakPackages() map[string]string {
+	flatpaks := make(map[string]string)
+
+	cmd := exec.Command("flatpak", "list", "--app")
+	output, err := cmd.Output()
+	if err != nil {
+		return flatpaks
+	}
+
+	lines := strings.Split(string(output), "\n")
+
+	for _, line := range lines {
+		fields := strings.Fields(line)
+		if len(fields) > 0 {
+			flatpaks[fields[0]] = "installed"
+		}
+	}
+	return flatpaks
+}
+
 func FindConfigFiles(pkgs []string) (map[string]string, error) {
 	results := make(map[string]string)
 	total := len(pkgs)
@@ -154,17 +198,35 @@ func FindConfigFiles(pkgs []string) (map[string]string, error) {
 	return results, nil
 }
 
-func FetchSystemInfo() {
-	os := DetectSystem()
+func Backup() {
+	distro := DetectSystem()
 	pkgManager := DetectPkgManager()
 	packages := ListPackages(pkgManager)
 	configs, _ := FindConfigFiles(packages)
+	snaps := ListSnapPackages()
+	flatpaks := ListFlatpakPackages()
 
-	fmt.Printf("%s, %s \n", os, pkgManager)
-
-	for pkg, conf := range configs {
-		fmt.Printf("%s: %s\n", pkg, conf)
+	system := SystemInfo{
+		OS:         distro,
+		PkgManager: pkgManager,
+		Packages:   configs,
+		Snaps:      snaps,
+		Flatpaks:   flatpaks,
 	}
-	fmt.Println(len(packages))
-	fmt.Println(len(configs))
+
+	jsonData, err := json.MarshalIndent(system, "", " ")
+	if err != nil {
+		fmt.Println("Error encoding JSON")
+	}
+
+	fileName := "backup.json"
+	err = os.WriteFile(fileName, jsonData, 0644)
+	if err != nil {
+		fmt.Println("Error writing system info to JSON file")
+	}
+
+	fmt.Printf("%s, %s \n", system.OS, system.PkgManager)
+	fmt.Println("Packages:", len(system.Packages))
+	fmt.Println("Snaps:", len(system.Snaps))
+	fmt.Println("Flatpaks:", len(system.Flatpaks))
 }

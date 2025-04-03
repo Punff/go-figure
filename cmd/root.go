@@ -19,10 +19,10 @@ var tuiCmd = &cobra.Command{
 }
 
 var systemReportCmd = &cobra.Command{
-	Use:   "sys-info",
-	Short: "testing report",
+	Use:   "backup",
+	Short: "Backs up system",
 	Run: func(cmd *cobra.Command, args []string) {
-		internal.FetchSystemInfo()
+		internal.Backup()
 	},
 }
 
