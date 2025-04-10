@@ -143,52 +143,84 @@ func ListFlatpakPackages() map[string]string {
 	return flatpaks
 }
 
+func normalize(name string) string {
+	name = strings.ToLower(name)
+	suffixes := []string{"-git", "-bin", "-stable", "-nightly", "-dev", "-browser"}
+	for _, suffix := range suffixes {
+		name = strings.TrimSuffix(name, suffix)
+	}
+	return name
+}
+
 func FindConfigFiles(pkgs []string) (map[string]string, error) {
 	results := make(map[string]string)
 	total := len(pkgs)
+	home := os.Getenv("HOME")
+
+	configLocations := []string{
+		filepath.Join(home, ".config"),
+		home,
+		filepath.Join(home, ".local", "share"),
+		filepath.Join(home, ".local", "config"),
+		filepath.Join(home, ".cache"),
+		filepath.Join(home, ".var", "app"),
+	}
 
 	for i, pkg := range pkgs {
 		found := false
-		var foundPath string
-
-		searchDirs := []string{"/etc", "/var", os.Getenv("HOME") + "/.config"}
-		for _, dir := range searchDirs {
-			var matches []string
-			err := filepath.Walk(dir, func(path string, info os.FileInfo, err error) error {
-				if err != nil {
-					return nil
+		pkgNorm := normalize(pkg)
+		entries, err := os.ReadDir(configLocations[0])
+		if err == nil {
+			for _, entry := range entries {
+				if entry.IsDir() {
+					dirNorm := normalize(entry.Name())
+					if pkgNorm == dirNorm {
+						found = true
+						results[pkg] = filepath.Join(configLocations[0], entry.Name())
+						break
+					}
 				}
-				name := strings.ToLower(info.Name())
-				if strings.Contains(name, strings.ToLower(pkg)) {
-					matches = append(matches, path)
-					return filepath.SkipDir
-				}
-				return nil
-			})
-
-			if err == nil && len(matches) > 0 {
-				foundPath = matches[0]
-				found = true
-				break
 			}
 		}
 
 		if !found {
-			additionalDirs := []string{"/etc", "/etc/default", "/etc/sysconfig"}
-			for _, dir := range additionalDirs {
-				potentialPath := filepath.Join(dir, pkg)
-				if _, err := os.Stat(potentialPath); err == nil {
-					foundPath = potentialPath
-					found = true
+			dotPkg := "." + pkgNorm
+			dotPkgPath := filepath.Join(home, dotPkg)
+			if _, err := os.Stat(dotPkgPath); err == nil {
+				found = true
+				results[pkg] = dotPkgPath
+			}
+		}
+
+		if !found {
+			for j := 2; j < len(configLocations); j++ {
+				configDir := configLocations[j]
+				if _, err := os.Stat(configDir); os.IsNotExist(err) {
+					continue
+				}
+
+				entries, err := os.ReadDir(configDir)
+				if err != nil {
+					continue
+				}
+
+				for _, entry := range entries {
+					name := entry.Name()
+					if normalize(name) == pkgNorm {
+						found = true
+						results[pkg] = filepath.Join(configDir, name)
+						break
+					}
+				}
+
+				if found {
 					break
 				}
 			}
 		}
 
-		if found {
-			results[pkg] = foundPath
-		} else {
-			results[pkg] = "Not found"
+		if !found {
+			results[pkg] = "-"
 		}
 
 		fmt.Printf("\rProgress: %d/%d", i+1, total)
@@ -197,7 +229,6 @@ func FindConfigFiles(pkgs []string) (map[string]string, error) {
 	fmt.Println()
 	return results, nil
 }
-
 func Backup() {
 	distro := DetectSystem()
 	pkgManager := DetectPkgManager()

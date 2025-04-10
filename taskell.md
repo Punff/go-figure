@@ -8,7 +8,6 @@
 - Listener for changes
 - [LADA] Track suss config behaviour
 - --- SCRIPT ---
-- Generate full system config file, package + config
 - Full backup script
 - --- AUTH ---
 - Github authentication
@@ -34,3 +33,4 @@
 - Detect package manager
 - List all installed packages
 - Generate JSON? file with info and packages
+- Generate full system config file, package + config
