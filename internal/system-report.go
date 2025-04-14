@@ -10,11 +10,11 @@ import (
 )
 
 type SystemInfo struct {
-	OS         string            `json:"os"`
-	PkgManager string            `json:"pkgManager"`
-	Packages   map[string]string `json:"packages"`
-	Snaps      map[string]string `json:"snaps"`
-	Flatpaks   map[string]string `json:"flatpaks"`
+	OS         string              `json:"os"`
+	PkgManager string              `json:"pkgManager"`
+	Packages   map[string][]string `json:"packages"`
+	Snaps      map[string]string   `json:"snaps"`
+	Flatpaks   map[string]string   `json:"flatpaks"`
 }
 
 func DetectSystem() string {
@@ -152,14 +152,13 @@ func normalize(name string) string {
 	return name
 }
 
-func FindConfigFiles(pkgs []string) (map[string]string, error) {
-	results := make(map[string]string)
+func FindConfigFiles(pkgs []string) (map[string][]string, error) {
+	results := make(map[string][]string)
 	total := len(pkgs)
 	home := os.Getenv("HOME")
 
 	configLocations := []string{
 		filepath.Join(home, ".config"),
-		home,
 		filepath.Join(home, ".local", "share"),
 		filepath.Join(home, ".local", "config"),
 		filepath.Join(home, ".cache"),
@@ -167,60 +166,27 @@ func FindConfigFiles(pkgs []string) (map[string]string, error) {
 	}
 
 	for i, pkg := range pkgs {
-		found := false
 		pkgNorm := normalize(pkg)
-		entries, err := os.ReadDir(configLocations[0])
-		if err == nil {
-			for _, entry := range entries {
-				if entry.IsDir() {
-					dirNorm := normalize(entry.Name())
-					if pkgNorm == dirNorm {
-						found = true
-						results[pkg] = filepath.Join(configLocations[0], entry.Name())
-						break
-					}
-				}
+		for _, location := range configLocations {
+			configNorm := filepath.Join(location, pkgNorm)
+			config := filepath.Join(location, pkg)
+
+			if _, err := os.Stat(configNorm); err == nil {
+				results[pkg] = append(results[pkg], configNorm)
+			} else if _, err := os.Stat(config); err == nil {
+				results[pkg] = append(results[pkg], config)
 			}
+
 		}
 
-		if !found {
-			dotPkg := "." + pkgNorm
-			dotPkgPath := filepath.Join(home, dotPkg)
-			if _, err := os.Stat(dotPkgPath); err == nil {
-				found = true
-				results[pkg] = dotPkgPath
-			}
+		dotPkg := "." + pkgNorm
+		dotPkgPath := filepath.Join(home, dotPkg)
+		if _, err := os.Stat(dotPkgPath); err == nil {
+			results[pkg] = append(results[pkg], dotPkgPath)
 		}
 
-		if !found {
-			for j := 2; j < len(configLocations); j++ {
-				configDir := configLocations[j]
-				if _, err := os.Stat(configDir); os.IsNotExist(err) {
-					continue
-				}
-
-				entries, err := os.ReadDir(configDir)
-				if err != nil {
-					continue
-				}
-
-				for _, entry := range entries {
-					name := entry.Name()
-					if normalize(name) == pkgNorm {
-						found = true
-						results[pkg] = filepath.Join(configDir, name)
-						break
-					}
-				}
-
-				if found {
-					break
-				}
-			}
-		}
-
-		if !found {
-			results[pkg] = "-"
+		if results[pkg] == nil {
+			results[pkg] = append(results[pkg], "-")
 		}
 
 		fmt.Printf("\rProgress: %d/%d", i+1, total)
@@ -229,6 +195,7 @@ func FindConfigFiles(pkgs []string) (map[string]string, error) {
 	fmt.Println()
 	return results, nil
 }
+
 func Backup() {
 	distro := DetectSystem()
 	pkgManager := DetectPkgManager()

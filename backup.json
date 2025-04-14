@@ -2,231 +2,702 @@
  "os": "endeavouros",
  "pkgManager": "pacman",
  "packages": {
-  "accountsservice": "-",
-  "alacritty": "/home/punff/.config/alacritty",
-  "alsa-firmware": "-",
-  "alsa-plugins": "-",
-  "alsa-utils": "-",
-  "aria2c-daemon": "-",
-  "aspell": "-",
-  "b43-fwcutter": "-",
-  "base": "-",
-  "base-devel": "-",
-  "bash-completion": "-",
-  "bashmarks-git": "-",
-  "bind": "-",
-  "bluez": "-",
-  "bluez-utils": "-",
-  "brightnessctl": "-",
-  "btrfs-progs": "-",
-  "cantarell-fonts": "-",
-  "cryptsetup": "-",
-  "cups": "-",
-  "cups-browsed": "-",
-  "cups-filters": "-",
-  "cups-pdf": "-",
-  "dart-sass": "-",
-  "device-mapper": "-",
-  "diffutils": "-",
-  "discord": "/home/punff/.config/discord",
-  "dmidecode": "-",
-  "dmraid": "-",
-  "dnsmasq": "-",
-  "dosfstools": "-",
-  "downgrade": "-",
-  "dracut": "-",
-  "duf": "-",
-  "e2fsprogs": "-",
-  "efibootmgr": "-",
-  "efitools": "-",
-  "endeavouros-keyring": "-",
-  "endeavouros-mirrorlist": "-",
-  "eos-dracut": "-",
-  "eos-hooks": "-",
-  "ethtool": "-",
-  "exfatprogs": "-",
-  "f2fs-tools": "-",
-  "ffmpegthumbnailer": "-",
-  "firewalld": "-",
-  "foomatic-db": "-",
-  "foomatic-db-engine": "-",
-  "foomatic-db-gutenprint-ppds": "-",
-  "foomatic-db-nonfree": "-",
-  "foomatic-db-nonfree-ppds": "-",
-  "foomatic-db-ppds": "-",
-  "fuzzel": "/home/punff/.config/fuzzel",
-  "ghostscript": "-",
-  "gimp": "/home/punff/.config/GIMP",
-  "gimp-plugin-gmic": "-",
-  "git": "-",
-  "glances": "-",
-  "gmic": "/home/punff/.config/gmic",
-  "gnome-bluetooth-3.0": "-",
-  "gnome-disk-utility": "-",
-  "gnome-keyring": "-",
-  "go": "/home/punff/.config/go",
-  "godot": "/home/punff/.config/godot",
-  "godot-mono": "-",
-  "gopls": "/home/punff/.cache/gopls",
-  "grub": "-",
-  "grub2-theme-crt-amber-4k-git": "-",
-  "gsfonts": "-",
-  "gst-libav": "-",
-  "gst-plugins-bad": "-",
-  "gutenprint": "-",
-  "haveged": "-",
-  "hdparm": "-",
-  "helix": "/home/punff/.config/helix",
-  "htop": "/home/punff/.config/htop",
-  "hwdetect": "-",
-  "hwinfo": "-",
-  "ignis": "/home/punff/.config/ignis",
-  "imv": "-",
-  "inetutils": "-",
-  "intel-ucode": "-",
-  "inxi": "-",
-  "iptables-nft": "-",
-  "iwd": "-",
-  "jfsutils": "-",
-  "less": "-",
-  "libdvdcss": "-",
-  "libgsf": "-",
-  "libopenraw": "-",
-  "libwnck3": "-",
-  "linux": "-",
-  "linux-firmware": "-",
-  "linux-headers": "-",
-  "logrotate": "-",
-  "lsb-release": "-",
-  "lsd": "-",
-  "lsscsi": "-",
-  "lvm2": "-",
-  "ly": "-",
-  "mako": "/home/punff/.config/mako",
-  "man-db": "-",
-  "man-pages": "-",
-  "mdadm": "-",
-  "mediawriter": "-",
-  "meld": "-",
-  "mesa-utils": "-",
-  "modemmanager": "-",
-  "mono": "-",
-  "morphosis": "-",
-  "mpv": "/home/punff/.config/mpv",
-  "mtools": "-",
-  "nano": "-",
-  "nano-syntax-highlighting": "-",
-  "nautilus": "/home/punff/.config/nautilus",
-  "nautilus-code": "-",
-  "nautilus-image-converter": "-",
-  "nautilus-open-any-terminal": "-",
-  "nautilus-sendto": "-",
-  "neofetch": "/home/punff/.config/neofetch",
-  "neovim": "-",
-  "netctl": "-",
-  "networkmanager": "-",
-  "networkmanager-openconnect": "-",
-  "networkmanager-openvpn": "-",
-  "nfs-utils": "-",
-  "nicotine+": "-",
-  "nilfs-utils": "-",
-  "niri-git": "/home/punff/.config/niri",
-  "nm-connection-editor": "-",
-  "noto-fonts": "-",
-  "noto-fonts-cjk": "-",
-  "noto-fonts-emoji": "-",
-  "noto-fonts-extra": "-",
-  "nss-mdns": "-",
-  "ntfs-3g": "-",
-  "ntp": "-",
-  "obsidian": "/home/punff/.config/obsidian",
-  "omnisharp-roslyn": "-",
-  "onlyoffice-bin": "/home/punff/.config/onlyoffice",
-  "openssh": "-",
-  "os-prober": "-",
-  "overskride": "-",
-  "pacman-contrib": "-",
-  "papers": "-",
-  "pavucontrol-git": "-",
-  "perl": "-",
-  "pipewire-alsa": "-",
-  "pipewire-jack": "-",
-  "pipewire-pulse": "-",
-  "pkgfile": "-",
-  "plocate": "-",
-  "poppler-glib": "-",
-  "power-profiles-daemon": "-",
-  "pv": "-",
-  "python": "-",
-  "python-capng": "-",
-  "python-dbus-next": "-",
-  "python-defusedxml": "-",
-  "python-packaging": "-",
-  "python-pyqt5": "-",
-  "rate-mirrors": "-",
-  "rebuild-detector": "-",
-  "reflector": "-",
-  "rsync": "-",
-  "rtkit": "-",
-  "s-nail": "-",
-  "sg3_utils": "-",
-  "shortwave": "/home/punff/.config/Shortwave",
-  "sl": "-",
-  "smartmontools": "-",
-  "sof-firmware": "-",
-  "speedtest-cli": "-",
-  "splix": "-",
-  "sudo": "-",
-  "swayosd-git": "-",
-  "syncthing": "-",
-  "sysfsutils": "-",
-  "system-config-printer": "-",
-  "systemd-sysvcompat": "-",
-  "tailscale": "-",
-  "taskell-bin": "/home/punff/.config/taskell",
-  "texinfo": "-",
-  "tldr": "/home/punff/.cache/tldr",
-  "tree": "-",
-  "ttf-bitstream-vera": "-",
-  "ttf-dejavu": "-",
-  "ttf-iosevka-nerd": "-",
-  "ttf-liberation": "-",
-  "ttf-opensans": "-",
-  "unityhub": "/home/punff/.config/unityhub",
-  "unrar": "-",
-  "unzip": "-",
-  "upower": "-",
-  "usb_modeswitch": "-",
-  "usbutils": "-",
-  "vi": "-",
-  "vlc": "/home/punff/.config/vlc",
-  "vulkan-intel": "-",
-  "wget": "-",
-  "which": "-",
-  "wireplumber": "-",
-  "wl-clipboard": "-",
-  "woeusb": "-",
-  "wpa_supplicant": "-",
-  "xdg-desktop-portal-wlr": "-",
-  "xdg-user-dirs": "-",
-  "xdg-utils": "-",
-  "xf86-input-libinput": "-",
-  "xf86-video-amdgpu": "-",
-  "xf86-video-ati": "-",
-  "xfsprogs": "-",
-  "xl2tpd": "-",
-  "xorg-server": "-",
-  "xorg-xdpyinfo": "-",
-  "xorg-xinit": "-",
-  "xorg-xinput": "-",
-  "xorg-xkill": "-",
-  "xorg-xrandr": "-",
-  "xterm": "-",
-  "xwayland-satellite": "-",
-  "yay": "/home/punff/.config/yay",
-  "youtube-music-bin": "-",
-  "zed": "/home/punff/.config/zed",
-  "zen-browser-bin": "/home/punff/.zen"
+  "accountsservice": [
+   "-"
+  ],
+  "alacritty": [
+   "/home/punff/.config/alacritty"
+  ],
+  "alsa-firmware": [
+   "-"
+  ],
+  "alsa-plugins": [
+   "-"
+  ],
+  "alsa-utils": [
+   "-"
+  ],
+  "aria2c-daemon": [
+   "-"
+  ],
+  "aspell": [
+   "-"
+  ],
+  "b43-fwcutter": [
+   "-"
+  ],
+  "base": [
+   "-"
+  ],
+  "base-devel": [
+   "-"
+  ],
+  "bash-completion": [
+   "-"
+  ],
+  "bashmarks-git": [
+   "-"
+  ],
+  "bind": [
+   "-"
+  ],
+  "bluez": [
+   "-"
+  ],
+  "bluez-utils": [
+   "-"
+  ],
+  "brightnessctl": [
+   "-"
+  ],
+  "btrfs-progs": [
+   "-"
+  ],
+  "cantarell-fonts": [
+   "-"
+  ],
+  "cryptsetup": [
+   "-"
+  ],
+  "cups": [
+   "-"
+  ],
+  "cups-browsed": [
+   "-"
+  ],
+  "cups-filters": [
+   "-"
+  ],
+  "cups-pdf": [
+   "-"
+  ],
+  "dart-sass": [
+   "-"
+  ],
+  "device-mapper": [
+   "-"
+  ],
+  "diffutils": [
+   "-"
+  ],
+  "discord": [
+   "/home/punff/.config/discord"
+  ],
+  "dmidecode": [
+   "-"
+  ],
+  "dmraid": [
+   "-"
+  ],
+  "dnsmasq": [
+   "-"
+  ],
+  "dosfstools": [
+   "-"
+  ],
+  "downgrade": [
+   "-"
+  ],
+  "dracut": [
+   "-"
+  ],
+  "duf": [
+   "-"
+  ],
+  "e2fsprogs": [
+   "-"
+  ],
+  "efibootmgr": [
+   "-"
+  ],
+  "efitools": [
+   "-"
+  ],
+  "endeavouros-keyring": [
+   "-"
+  ],
+  "endeavouros-mirrorlist": [
+   "-"
+  ],
+  "eos-dracut": [
+   "-"
+  ],
+  "eos-hooks": [
+   "-"
+  ],
+  "ethtool": [
+   "-"
+  ],
+  "exfatprogs": [
+   "-"
+  ],
+  "f2fs-tools": [
+   "-"
+  ],
+  "ffmpegthumbnailer": [
+   "-"
+  ],
+  "firewalld": [
+   "-"
+  ],
+  "foomatic-db": [
+   "-"
+  ],
+  "foomatic-db-engine": [
+   "-"
+  ],
+  "foomatic-db-gutenprint-ppds": [
+   "-"
+  ],
+  "foomatic-db-nonfree": [
+   "-"
+  ],
+  "foomatic-db-nonfree-ppds": [
+   "-"
+  ],
+  "foomatic-db-ppds": [
+   "-"
+  ],
+  "fuzzel": [
+   "/home/punff/.config/fuzzel",
+   "/home/punff/.cache/fuzzel"
+  ],
+  "ghostscript": [
+   "-"
+  ],
+  "gimp": [
+   "/home/punff/.cache/gimp"
+  ],
+  "gimp-plugin-gmic": [
+   "-"
+  ],
+  "git": [
+   "-"
+  ],
+  "glances": [
+   "-"
+  ],
+  "gmic": [
+   "/home/punff/.config/gmic"
+  ],
+  "gnome-bluetooth-3.0": [
+   "-"
+  ],
+  "gnome-disk-utility": [
+   "-"
+  ],
+  "gnome-keyring": [
+   "-"
+  ],
+  "go": [
+   "/home/punff/.config/go",
+   "/home/punff/.cache/go"
+  ],
+  "godot": [
+   "/home/punff/.config/godot",
+   "/home/punff/.local/share/godot",
+   "/home/punff/.cache/godot"
+  ],
+  "godot-mono": [
+   "-"
+  ],
+  "gopls": [
+   "/home/punff/.cache/gopls"
+  ],
+  "grub": [
+   "-"
+  ],
+  "grub2-theme-crt-amber-4k-git": [
+   "-"
+  ],
+  "gsfonts": [
+   "-"
+  ],
+  "gst-libav": [
+   "-"
+  ],
+  "gst-plugins-bad": [
+   "-"
+  ],
+  "gutenprint": [
+   "-"
+  ],
+  "haveged": [
+   "-"
+  ],
+  "hdparm": [
+   "-"
+  ],
+  "helix": [
+   "/home/punff/.config/helix",
+   "/home/punff/.cache/helix"
+  ],
+  "htop": [
+   "/home/punff/.config/htop"
+  ],
+  "hwdetect": [
+   "-"
+  ],
+  "hwinfo": [
+   "-"
+  ],
+  "ignis": [
+   "/home/punff/.config/ignis",
+   "/home/punff/.cache/ignis",
+   "/home/punff/.ignis"
+  ],
+  "imv": [
+   "-"
+  ],
+  "inetutils": [
+   "-"
+  ],
+  "intel-ucode": [
+   "-"
+  ],
+  "inxi": [
+   "-"
+  ],
+  "iptables-nft": [
+   "-"
+  ],
+  "iwd": [
+   "-"
+  ],
+  "jfsutils": [
+   "-"
+  ],
+  "less": [
+   "-"
+  ],
+  "libdvdcss": [
+   "-"
+  ],
+  "libgsf": [
+   "-"
+  ],
+  "libopenraw": [
+   "-"
+  ],
+  "libwnck3": [
+   "-"
+  ],
+  "linux": [
+   "-"
+  ],
+  "linux-firmware": [
+   "-"
+  ],
+  "linux-headers": [
+   "-"
+  ],
+  "logrotate": [
+   "-"
+  ],
+  "lsb-release": [
+   "-"
+  ],
+  "lsd": [
+   "-"
+  ],
+  "lsscsi": [
+   "-"
+  ],
+  "lvm2": [
+   "-"
+  ],
+  "ly": [
+   "-"
+  ],
+  "mako": [
+   "/home/punff/.config/mako"
+  ],
+  "man-db": [
+   "-"
+  ],
+  "man-pages": [
+   "-"
+  ],
+  "mdadm": [
+   "-"
+  ],
+  "mediawriter": [
+   "-"
+  ],
+  "meld": [
+   "-"
+  ],
+  "mesa-utils": [
+   "-"
+  ],
+  "modemmanager": [
+   "-"
+  ],
+  "mono": [
+   "-"
+  ],
+  "morphosis": [
+   "-"
+  ],
+  "mpv": [
+   "/home/punff/.config/mpv",
+   "/home/punff/.cache/mpv"
+  ],
+  "mtools": [
+   "-"
+  ],
+  "nano": [
+   "-"
+  ],
+  "nano-syntax-highlighting": [
+   "-"
+  ],
+  "nautilus": [
+   "/home/punff/.config/nautilus",
+   "/home/punff/.local/share/nautilus"
+  ],
+  "nautilus-code": [
+   "-"
+  ],
+  "nautilus-image-converter": [
+   "-"
+  ],
+  "nautilus-open-any-terminal": [
+   "-"
+  ],
+  "nautilus-sendto": [
+   "-"
+  ],
+  "neofetch": [
+   "/home/punff/.config/neofetch"
+  ],
+  "neovim": [
+   "-"
+  ],
+  "netctl": [
+   "-"
+  ],
+  "networkmanager": [
+   "-"
+  ],
+  "networkmanager-openconnect": [
+   "-"
+  ],
+  "networkmanager-openvpn": [
+   "-"
+  ],
+  "nfs-utils": [
+   "-"
+  ],
+  "nicotine+": [
+   "-"
+  ],
+  "nilfs-utils": [
+   "-"
+  ],
+  "niri-git": [
+   "/home/punff/.config/niri"
+  ],
+  "nm-connection-editor": [
+   "-"
+  ],
+  "noto-fonts": [
+   "-"
+  ],
+  "noto-fonts-cjk": [
+   "-"
+  ],
+  "noto-fonts-emoji": [
+   "-"
+  ],
+  "noto-fonts-extra": [
+   "-"
+  ],
+  "nss-mdns": [
+   "-"
+  ],
+  "ntfs-3g": [
+   "-"
+  ],
+  "ntp": [
+   "-"
+  ],
+  "obsidian": [
+   "/home/punff/.config/obsidian"
+  ],
+  "omnisharp-roslyn": [
+   "-"
+  ],
+  "onlyoffice-bin": [
+   "/home/punff/.config/onlyoffice",
+   "/home/punff/.local/share/onlyoffice"
+  ],
+  "openssh": [
+   "-"
+  ],
+  "os-prober": [
+   "-"
+  ],
+  "overskride": [
+   "-"
+  ],
+  "pacman-contrib": [
+   "-"
+  ],
+  "papers": [
+   "-"
+  ],
+  "pavucontrol-git": [
+   "-"
+  ],
+  "perl": [
+   "-"
+  ],
+  "pipewire-alsa": [
+   "-"
+  ],
+  "pipewire-jack": [
+   "-"
+  ],
+  "pipewire-pulse": [
+   "-"
+  ],
+  "pkgfile": [
+   "-"
+  ],
+  "plocate": [
+   "-"
+  ],
+  "poppler-glib": [
+   "-"
+  ],
+  "power-profiles-daemon": [
+   "-"
+  ],
+  "pv": [
+   "-"
+  ],
+  "python": [
+   "-"
+  ],
+  "python-capng": [
+   "-"
+  ],
+  "python-dbus-next": [
+   "-"
+  ],
+  "python-defusedxml": [
+   "-"
+  ],
+  "python-packaging": [
+   "-"
+  ],
+  "python-pyqt5": [
+   "-"
+  ],
+  "rate-mirrors": [
+   "-"
+  ],
+  "rebuild-detector": [
+   "-"
+  ],
+  "reflector": [
+   "-"
+  ],
+  "rsync": [
+   "-"
+  ],
+  "rtkit": [
+   "-"
+  ],
+  "s-nail": [
+   "-"
+  ],
+  "sg3_utils": [
+   "-"
+  ],
+  "shortwave": [
+   "-"
+  ],
+  "sl": [
+   "-"
+  ],
+  "smartmontools": [
+   "-"
+  ],
+  "sof-firmware": [
+   "-"
+  ],
+  "speedtest-cli": [
+   "-"
+  ],
+  "splix": [
+   "-"
+  ],
+  "sudo": [
+   "-"
+  ],
+  "swaybg": [
+   "-"
+  ],
+  "swayosd-git": [
+   "-"
+  ],
+  "syncthing": [
+   "-"
+  ],
+  "sysfsutils": [
+   "-"
+  ],
+  "system-config-printer": [
+   "-"
+  ],
+  "systemd-sysvcompat": [
+   "-"
+  ],
+  "tailscale": [
+   "-"
+  ],
+  "taskell-bin": [
+   "/home/punff/.config/taskell"
+  ],
+  "texinfo": [
+   "-"
+  ],
+  "tldr": [
+   "/home/punff/.cache/tldr"
+  ],
+  "tree": [
+   "-"
+  ],
+  "ttf-bitstream-vera": [
+   "-"
+  ],
+  "ttf-dejavu": [
+   "-"
+  ],
+  "ttf-iosevka-nerd": [
+   "-"
+  ],
+  "ttf-jetbrains-mono-nerd": [
+   "-"
+  ],
+  "ttf-liberation": [
+   "-"
+  ],
+  "ttf-opensans": [
+   "-"
+  ],
+  "unityhub": [
+   "/home/punff/.config/unityhub"
+  ],
+  "unrar": [
+   "-"
+  ],
+  "unzip": [
+   "-"
+  ],
+  "upower": [
+   "-"
+  ],
+  "usb_modeswitch": [
+   "-"
+  ],
+  "usbutils": [
+   "-"
+  ],
+  "vi": [
+   "-"
+  ],
+  "vlc": [
+   "/home/punff/.config/vlc",
+   "/home/punff/.local/share/vlc"
+  ],
+  "vulkan-intel": [
+   "-"
+  ],
+  "wget": [
+   "-"
+  ],
+  "which": [
+   "-"
+  ],
+  "wireplumber": [
+   "-"
+  ],
+  "wl-clipboard": [
+   "-"
+  ],
+  "woeusb": [
+   "-"
+  ],
+  "wpa_supplicant": [
+   "-"
+  ],
+  "xdg-desktop-portal-wlr": [
+   "-"
+  ],
+  "xdg-user-dirs": [
+   "-"
+  ],
+  "xdg-utils": [
+   "-"
+  ],
+  "xf86-input-libinput": [
+   "-"
+  ],
+  "xf86-video-amdgpu": [
+   "-"
+  ],
+  "xf86-video-ati": [
+   "-"
+  ],
+  "xfsprogs": [
+   "-"
+  ],
+  "xl2tpd": [
+   "-"
+  ],
+  "xorg-server": [
+   "-"
+  ],
+  "xorg-xdpyinfo": [
+   "-"
+  ],
+  "xorg-xinit": [
+   "-"
+  ],
+  "xorg-xinput": [
+   "-"
+  ],
+  "xorg-xkill": [
+   "-"
+  ],
+  "xorg-xrandr": [
+   "-"
+  ],
+  "xterm": [
+   "-"
+  ],
+  "xwayland-satellite": [
+   "-"
+  ],
+  "yay": [
+   "/home/punff/.config/yay",
+   "/home/punff/.cache/yay"
+  ],
+  "youtube-music-bin": [
+   "-"
+  ],
+  "zed": [
+   "/home/punff/.config/zed",
+   "/home/punff/.local/share/zed",
+   "/home/punff/.cache/zed"
+  ],
+  "zen-browser-bin": [
+   "/home/punff/.cache/zen",
+   "/home/punff/.zen"
+  ]
  },
  "snaps": {},
  "flatpaks": {}
