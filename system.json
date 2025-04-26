@@ -1,7 +1,239 @@
 {
  "os": "endeavouros",
  "pkgManager": "pacman",
- "packages": {
+ "packages": [
+  "accountsservice",
+  "alacritty",
+  "alsa-firmware",
+  "alsa-plugins",
+  "alsa-utils",
+  "arduino-ide",
+  "aria2c-daemon",
+  "aspell",
+  "b43-fwcutter",
+  "base",
+  "base-devel",
+  "bash-completion",
+  "bashmarks-git",
+  "bind",
+  "bluez",
+  "bluez-utils",
+  "brightnessctl",
+  "btrfs-progs",
+  "cantarell-fonts",
+  "cryptsetup",
+  "cups",
+  "cups-browsed",
+  "cups-filters",
+  "cups-pdf",
+  "dart-sass",
+  "device-mapper",
+  "diffutils",
+  "discord",
+  "dmidecode",
+  "dmraid",
+  "dnsmasq",
+  "dosfstools",
+  "downgrade",
+  "dracut",
+  "duf",
+  "e2fsprogs",
+  "efibootmgr",
+  "efitools",
+  "endeavouros-keyring",
+  "endeavouros-mirrorlist",
+  "eos-dracut",
+  "eos-hooks",
+  "ethtool",
+  "exfatprogs",
+  "f2fs-tools",
+  "ffmpegthumbnailer",
+  "firewalld",
+  "foomatic-db",
+  "foomatic-db-engine",
+  "foomatic-db-gutenprint-ppds",
+  "foomatic-db-nonfree",
+  "foomatic-db-nonfree-ppds",
+  "foomatic-db-ppds",
+  "fuzzel",
+  "ghostscript",
+  "gimp",
+  "gimp-plugin-gmic",
+  "git",
+  "glances",
+  "gmic",
+  "gnome-bluetooth-3.0",
+  "gnome-disk-utility",
+  "gnome-keyring",
+  "go",
+  "godot",
+  "godot-mono",
+  "gopls",
+  "grub",
+  "grub2-theme-crt-amber-4k-git",
+  "gsfonts",
+  "gst-libav",
+  "gst-plugins-bad",
+  "gutenprint",
+  "haveged",
+  "hdparm",
+  "helix",
+  "heroic-games-launcher-bin",
+  "htop",
+  "hwdetect",
+  "hwinfo",
+  "ignis",
+  "imv",
+  "inetutils",
+  "intel-ucode",
+  "inxi",
+  "iptables-nft",
+  "iwd",
+  "jfsutils",
+  "legendary",
+  "less",
+  "libdvdcss",
+  "libgsf",
+  "libopenraw",
+  "libwnck3",
+  "linux",
+  "linux-firmware",
+  "linux-headers",
+  "logrotate",
+  "lsb-release",
+  "lsd",
+  "lsscsi",
+  "lvm2",
+  "ly",
+  "mako",
+  "man-db",
+  "man-pages",
+  "marktext-bin",
+  "mdadm",
+  "mediawriter",
+  "meld",
+  "mesa-utils",
+  "modemmanager",
+  "mono",
+  "morphosis",
+  "mpv",
+  "mtools",
+  "nano",
+  "nano-syntax-highlighting",
+  "nautilus",
+  "nautilus-code",
+  "nautilus-image-converter",
+  "nautilus-open-any-terminal",
+  "nautilus-sendto",
+  "neofetch",
+  "neovim",
+  "netctl",
+  "networkmanager",
+  "networkmanager-openconnect",
+  "networkmanager-openvpn",
+  "nfs-utils",
+  "nicotine+",
+  "nilfs-utils",
+  "niri-git",
+  "nm-connection-editor",
+  "noto-fonts",
+  "noto-fonts-cjk",
+  "noto-fonts-emoji",
+  "noto-fonts-extra",
+  "nss-mdns",
+  "ntfs-3g",
+  "ntp",
+  "obsidian",
+  "omnisharp-roslyn",
+  "onlyoffice-bin",
+  "openssh",
+  "os-prober",
+  "overskride",
+  "pacman-contrib",
+  "papers",
+  "pavucontrol-git",
+  "perl",
+  "pipewire-alsa",
+  "pipewire-jack",
+  "pipewire-pulse",
+  "pkgfile",
+  "plocate",
+  "poppler-glib",
+  "power-profiles-daemon",
+  "pv",
+  "python",
+  "python-capng",
+  "python-dbus-next",
+  "python-defusedxml",
+  "python-packaging",
+  "python-pyqt5",
+  "rate-mirrors",
+  "rebuild-detector",
+  "reflector",
+  "rsync",
+  "rtkit",
+  "s-nail",
+  "sg3_utils",
+  "shortwave",
+  "sl",
+  "smartmontools",
+  "sof-firmware",
+  "speedtest-cli",
+  "splix",
+  "steam",
+  "sudo",
+  "swaybg",
+  "swayosd-git",
+  "syncthing",
+  "sysfsutils",
+  "system-config-printer",
+  "systemd-sysvcompat",
+  "tailscale",
+  "taskell-bin",
+  "texinfo",
+  "tldr",
+  "tree",
+  "ttf-bitstream-vera",
+  "ttf-dejavu",
+  "ttf-iosevka-nerd",
+  "ttf-jetbrains-mono-nerd",
+  "ttf-liberation",
+  "ttf-opensans",
+  "unrar",
+  "unzip",
+  "upower",
+  "usb_modeswitch",
+  "usbutils",
+  "vi",
+  "vlc",
+  "vulkan-intel",
+  "wget",
+  "which",
+  "wireplumber",
+  "wl-clipboard",
+  "woeusb",
+  "wpa_supplicant",
+  "xdg-desktop-portal-wlr",
+  "xdg-user-dirs",
+  "xdg-utils",
+  "xf86-input-libinput",
+  "xf86-video-amdgpu",
+  "xf86-video-ati",
+  "xfsprogs",
+  "xl2tpd",
+  "xorg-server",
+  "xorg-xdpyinfo",
+  "xorg-xinit",
+  "xorg-xinput",
+  "xorg-xkill",
+  "xorg-xrandr",
+  "xterm",
+  "xwayland-satellite",
+  "yay",
+  "youtube-music-bin",
+  "zen-browser-bin"
+ ],
+ "configs": {
   "accountsservice": [
    "-"
   ],
@@ -16,6 +248,9 @@
   ],
   "alsa-utils": [
    "-"
+  ],
+  "arduino-ide": [
+   "/home/punff/.config/arduino-ide"
   ],
   "aria2c-daemon": [
    "-"
@@ -159,14 +394,13 @@
    "-"
   ],
   "fuzzel": [
-   "/home/punff/.config/fuzzel",
-   "/home/punff/.cache/fuzzel"
+   "/home/punff/.config/fuzzel"
   ],
   "ghostscript": [
    "-"
   ],
   "gimp": [
-   "/home/punff/.cache/gimp"
+   "-"
   ],
   "gimp-plugin-gmic": [
    "-"
@@ -190,19 +424,16 @@
    "-"
   ],
   "go": [
-   "/home/punff/.config/go",
-   "/home/punff/.cache/go"
+   "/home/punff/.config/go"
   ],
   "godot": [
-   "/home/punff/.config/godot",
-   "/home/punff/.local/share/godot",
-   "/home/punff/.cache/godot"
+   "/home/punff/.config/godot"
   ],
   "godot-mono": [
    "-"
   ],
   "gopls": [
-   "/home/punff/.cache/gopls"
+   "-"
   ],
   "grub": [
    "-"
@@ -229,8 +460,10 @@
    "-"
   ],
   "helix": [
-   "/home/punff/.config/helix",
-   "/home/punff/.cache/helix"
+   "/home/punff/.config/helix"
+  ],
+  "heroic-games-launcher-bin": [
+   "-"
   ],
   "htop": [
    "/home/punff/.config/htop"
@@ -243,7 +476,6 @@
   ],
   "ignis": [
    "/home/punff/.config/ignis",
-   "/home/punff/.cache/ignis",
    "/home/punff/.ignis"
   ],
   "imv": [
@@ -266,6 +498,9 @@
   ],
   "jfsutils": [
    "-"
+  ],
+  "legendary": [
+   "/home/punff/.config/legendary"
   ],
   "less": [
    "-"
@@ -318,6 +553,9 @@
   "man-pages": [
    "-"
   ],
+  "marktext-bin": [
+   "/home/punff/.config/marktext"
+  ],
   "mdadm": [
    "-"
   ],
@@ -340,8 +578,7 @@
    "-"
   ],
   "mpv": [
-   "/home/punff/.config/mpv",
-   "/home/punff/.cache/mpv"
+   "/home/punff/.config/mpv"
   ],
   "mtools": [
    "-"
@@ -353,8 +590,7 @@
    "-"
   ],
   "nautilus": [
-   "/home/punff/.config/nautilus",
-   "/home/punff/.local/share/nautilus"
+   "/home/punff/.config/nautilus"
   ],
   "nautilus-code": [
    "-"
@@ -429,8 +665,7 @@
    "-"
   ],
   "onlyoffice-bin": [
-   "/home/punff/.config/onlyoffice",
-   "/home/punff/.local/share/onlyoffice"
+   "/home/punff/.config/onlyoffice"
   ],
   "openssh": [
    "-"
@@ -534,6 +769,9 @@
   "splix": [
    "-"
   ],
+  "steam": [
+   "/home/punff/.steam"
+  ],
   "sudo": [
    "-"
   ],
@@ -565,7 +803,7 @@
    "-"
   ],
   "tldr": [
-   "/home/punff/.cache/tldr"
+   "-"
   ],
   "tree": [
    "-"
@@ -588,9 +826,6 @@
   "ttf-opensans": [
    "-"
   ],
-  "unityhub": [
-   "/home/punff/.config/unityhub"
-  ],
   "unrar": [
    "-"
   ],
@@ -610,8 +845,7 @@
    "-"
   ],
   "vlc": [
-   "/home/punff/.config/vlc",
-   "/home/punff/.local/share/vlc"
+   "/home/punff/.config/vlc"
   ],
   "vulkan-intel": [
    "-"
@@ -683,22 +917,15 @@
    "-"
   ],
   "yay": [
-   "/home/punff/.config/yay",
-   "/home/punff/.cache/yay"
+   "/home/punff/.config/yay"
   ],
   "youtube-music-bin": [
    "-"
   ],
-  "zed": [
-   "/home/punff/.config/zed",
-   "/home/punff/.local/share/zed",
-   "/home/punff/.cache/zed"
-  ],
   "zen-browser-bin": [
-   "/home/punff/.cache/zen",
    "/home/punff/.zen"
   ]
  },
- "snaps": {},
- "flatpaks": {}
+ "snaps": null,
+ "flatpaks": null
 }
